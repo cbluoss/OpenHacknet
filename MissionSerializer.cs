@@ -14,11 +14,11 @@ namespace Hacknet
             return
                 string.Concat(
                     string.Concat(
-                        GroupName + (object) " Contract #" + contractRegistryNumber +
+                        GroupName + " Contract #" + contractRegistryNumber +
                         "\n--------------------------------------------  #%#\n" + "Code = " +
                         encodeString(activeMission.reloadGoalsSourceFile) + "\n  #%#\n" + "Client = " +
                         activeMission.client + "  #%#\n" + "Target = " + activeMission.target + "  #%#\n",
-                        (object) "RequiredRank = ", (object) activeMission.requiredRank, (object) "  #%#\n"),
+                        "RequiredRank = ", activeMission.requiredRank, "  #%#\n"),
                     "Difficulty = ", activeMission.difficulty, "\n  #%#\n") + "Title = " + activeMission.postingTitle +
                 "  #%#\n" + "Posting = " + activeMission.postingBody + "\n  #%#\n" + "E_TargetTrack = " +
                 encodeString(activeMission.genTarget) + "  #%#\n" + "E_TargetTaskData = " +

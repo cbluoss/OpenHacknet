@@ -114,7 +114,7 @@ namespace Hacknet
             var navigationPathAtPath = Programs.getNavigationPathAtPath(fPath, os, f);
             var str = "";
             for (var index = 0; index < navigationPathAtPath.Count; ++index)
-                str = str + (object) "#" + navigationPathAtPath[index];
+                str = str + "#" + navigationPathAtPath[index];
             return str;
         }
     }

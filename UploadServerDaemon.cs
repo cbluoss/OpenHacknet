@@ -48,7 +48,7 @@ namespace Hacknet
 
         public override string getSaveString()
         {
-            return "<UploadServerDaemon name=\"" + (object) name + "\" foldername=\"" + Foldername + "\" color=\"" +
+            return "<UploadServerDaemon name=\"" + name + "\" foldername=\"" + Foldername + "\" color=\"" +
                    Utils.convertColorToParseableString(themeColor) + "\" needsAuth=\"" + needsAuthentication + "\" />";
         }
 

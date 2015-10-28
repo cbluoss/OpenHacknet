@@ -27,7 +27,7 @@ namespace Hacknet
 
         public string getSaveString()
         {
-            return "<user name=\"" + (object) name + "\" pass=\"" + pass + "\" type=\"" + type + "\" known=\"" + known +
+            return "<user name=\"" + name + "\" pass=\"" + pass + "\" type=\"" + type + "\" known=\"" + known +
                    "\" />";
         }
 

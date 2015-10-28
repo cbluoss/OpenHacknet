@@ -214,7 +214,7 @@ namespace Hacknet
                 if (multiplayer)
                 {
                     thisComputer.addMultiplayerTargetFile();
-                    sendMessage("newComp #" + (object) thisComputer.ip + "#" + compLocation.X + "#" + compLocation.Y +
+                    sendMessage("newComp #" + thisComputer.ip + "#" + compLocation.X + "#" + compLocation.Y +
                                 "#" + 5 + "#" + thisComputer.name);
                     multiplayerMissionLoaded = false;
                 }
@@ -928,7 +928,7 @@ namespace Hacknet
         private void writeSaveGame(string filename)
         {
             var str1 = "<?xml version =\"1.0\" encoding =\"UTF-8\" ?>\n" +
-                       (object) "<HacknetSave generatedMissionCount=\"" + MissionGenerator.generationCount +
+                       "<HacknetSave generatedMissionCount=\"" + MissionGenerator.generationCount +
                        "\" Username=\"" + username + "\">\n" + Flags.GetSaveString() + netMap.getSaveString();
             var str2 = (currentMission == null
                 ? str1 + "<mission next=\"NULL_MISSION\" goals=\"none\" activeCheck=\"none\">\n</mission>"

@@ -453,7 +453,7 @@ namespace Hacknet
                 ++inboxPage;
             vector2_1.X += width + 2;
             var vector2_2 = TextItem.doMeasuredFontLabel(vector2_1,
-                (inboxPage + 1).ToString() + (object) " / " + (totalPagesDetected + 1), GuiData.tinyfont,
+                (inboxPage + 1).ToString() + " / " + (totalPagesDetected + 1), GuiData.tinyfont,
                 Utils.AddativeWhite, float.MaxValue, float.MaxValue);
             vector2_1.X += vector2_2.X + 4f;
             if (inboxPage <= 0 ||

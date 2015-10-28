@@ -156,7 +156,7 @@ namespace Hacknet.PlatformAPI.Storage
                             catch (Exception ex)
                             {
                                 MainMenu.AccumErrors = MainMenu.AccumErrors +
-                                                       (object) "WARNING: Error upgrading account #" + (index1 + 1) +
+                                                       "WARNING: Error upgrading account #" + (index1 + 1) +
                                                        ":\r\n" + Utils.GenerateReportFromException(ex);
                                 if (!HasSentErrorReport)
                                 {

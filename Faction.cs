@@ -40,7 +40,7 @@ namespace Hacknet
             var mail = MailServer.generateEmail("Contract Abandoned",
                 "Agent,\nYou have abandoned your current contract, and as such are no longer eligable to complete it.\n" +
                 "You are now free to accept further contracts from the contact database.\n" +
-                (object) "\nYour Current Ranking is " + getRank() + " of " + getMaxRank() + ".\n" + "\nThankyou,\n -" +
+                "\nYour Current Ranking is " + getRank() + " of " + getMaxRank() + ".\n" + "\nThankyou,\n -" +
                 name, name + " ReplyBot");
             ((MailServer) os.netMap.mailServer.getDaemon(typeof (MailServer))).addMail(mail, os.defaultUser.name);
         }
@@ -57,8 +57,8 @@ namespace Hacknet
                 str = "EntropyFaction";
             if (this is HubFaction)
                 str = "HubFaction";
-            return "<" + (object) str + " name=\"" + name + "\" id=\"" + idName + "\" neededVal=\"" + neededValue +
-                   "\" playerVal=\"" + (string) (object) playerValue + "\" playerHasPassed=\"" + playerHasPassedValue +
+            return "<" + str + " name=\"" + name + "\" id=\"" + idName + "\" neededVal=\"" + neededValue +
+                   "\" playerVal=\"" + playerValue + "\" playerHasPassed=\"" + playerHasPassedValue +
                    "\" />";
         }
 

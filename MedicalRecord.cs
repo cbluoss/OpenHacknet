@@ -76,7 +76,7 @@ namespace Hacknet
             var timeSpan = DateTime.Now - DateofBirth;
             var str2 = str1 + "\nBlood Type :: " + BloodType;
             var num = 25.0/762.0*Height;
-            var str3 = str2 + (object) "\nHeight :: " + Height + "cm (" + num + "\"" + (num%1.0*12.0) + "')" +
+            var str3 = str2 + "\nHeight :: " + Height + "cm (" + num + "\"" + (num%1.0*12.0) + "')" +
                        "\nAllergies :: " + GetCSVFromList(Allergies) + "\nActive Perscriptions :: ";
             string str4;
             if (Perscriptions.Count == 0)

@@ -139,7 +139,7 @@ namespace Hacknet
 
         public override string getSaveString()
         {
-            return "<MissionListingServer name=\"" + (object) name + "\" group=\"" + groupName + "\" public=\"" +
+            return "<MissionListingServer name=\"" + name + "\" group=\"" + groupName + "\" public=\"" +
                    isPublic + "\" assign=\"" + missionAssigner + "\"/>";
         }
 

@@ -170,11 +170,11 @@ namespace Hacknet
             if (name != f.name)
                 str1 = str1 + "Name Mismatch : Expected \"" + name + "\" But got \"" + f.name + "\"\r\n";
             if (f.folders.Count != folders.Count)
-                str1 = str1 + (object) "Folder Count Mismatch : Expected \"" + folders.Count + "\" But got \"" +
+                str1 = str1 + "Folder Count Mismatch : Expected \"" + folders.Count + "\" But got \"" +
                        f.folders.Count + "\"\r\n";
             if (f.files.Count != files.Count)
             {
-                str1 = str1 + (object) "File Count Mismatch In folder \"" + f.name + "\" : Expected \"" + files.Count +
+                str1 = str1 + "File Count Mismatch In folder \"" + f.name + "\" : Expected \"" + files.Count +
                        "\" But got \"" + f.files.Count + "\"\r\nFound Files:\r\n";
                 for (var index = 0; index < f.files.Count; ++index)
                     str1 = str1 + f.files[index].name + "\r\n--------\r\n" + f.files[index].data +
@@ -191,11 +191,11 @@ namespace Hacknet
             for (var index = 0; index < files.Count; ++index)
             {
                 if (files[index].name != f.files[index].name)
-                    str1 = str1 + (object) "Filename Mismatch (" + index + ") expected \"" + files[index].name +
+                    str1 = str1 + "Filename Mismatch (" + index + ") expected \"" + files[index].name +
                            "\" but got \"" + f.files[index].name + "\"\r\n";
                 if (files[index].data != f.files[index].data &&
                     files[index].data.Replace("\r\n", "\n") != f.files[index].data.Replace("\r\n", "\n"))
-                    str1 = str1 + (object) "Data Mismatch (" + index + ") expected ------\r\n" + files[index].data +
+                    str1 = str1 + "Data Mismatch (" + index + ") expected ------\r\n" + files[index].data +
                            "\r\n----- but got ------\r\n" + f.files[index].data + "\r\n-----\r\n";
                 else if (!Utils.CheckStringIsRenderable(files[index].data))
                     str1 = str1 + "Data in file is not renderable!\r\nFile: " + files[index].name + "\r\n";

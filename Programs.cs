@@ -328,7 +328,7 @@ namespace Hacknet
                                 flag = os.thisComputer.canReadFile(os.thisComputer.ip, currentFolder.files[index], index);
                             if (!flag)
                                 return;
-                            os.write(currentFolder.files[index].name + (object) " : " +
+                            os.write(currentFolder.files[index].name + " : " +
                                      currentFolder.files[index].size/1000.0 + "kb\n" + currentFolder.files[index].data +
                                      "\n");
                             os.displayCache = currentFolder.files[index].data;

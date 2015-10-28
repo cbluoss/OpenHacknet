@@ -115,7 +115,7 @@ namespace Hacknet
             }
             var str = p.FullName + "\n--------------------\n";
             for (var index = 0; index < p.degrees.Count; ++index)
-                str = str + (object) p.degrees[index].name + "\n" + p.degrees[index].uni + "\n" + p.degrees[index].GPA +
+                str = str + p.degrees[index].name + "\n" + p.degrees[index].uni + "\n" + p.degrees[index].GPA +
                       "\n--------------------";
             fileEntry.data = str;
             return fileEntry;
@@ -413,7 +413,7 @@ namespace Hacknet
             for (var index = 0; index < searchedDegrees.Count; ++index)
             {
                 var text = "Degree :" + searchedDegrees[index].name + "\nUni      :" + searchedDegrees[index].uni +
-                           (object) "\nGPA      :" + searchedDegrees[index].GPA;
+                           "\nGPA      :" + searchedDegrees[index].GPA;
                 TextItem.doFontLabel(new Vector2(x, y2), text, GuiData.smallfont, new Color?(),
                     bounds.Width - (bounds.X - x), 50f);
                 y2 += 60f;

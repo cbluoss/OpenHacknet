@@ -114,7 +114,7 @@ namespace Hacknet
                                 str2 = generateFileName(Utils.random.Next(300));
                                 ++num4;
                                 if (num4 > 3)
-                                    str2 = (Utils.getRandomChar() + Utils.getRandomChar()).ToString() + (object) str2;
+                                    str2 = (Utils.getRandomChar() + Utils.getRandomChar()).ToString() + str2;
                             } while (folder.searchForFile(str2) != null);
                             folder.files.Add(
                                 new FileEntry(
@@ -128,7 +128,7 @@ namespace Hacknet
                             var str2 = fileEntry.name;
                             while (folder.searchForFile(fileEntry.name) != null)
                                 fileEntry.name = Utils.getRandomChar().ToString() + (int) Utils.getRandomChar() +
-                                                 (object) str2;
+                                                 str2;
                             folder.files.Add(fileEntry);
                         }
                     }
@@ -289,7 +289,7 @@ namespace Hacknet
         {
             var str = "";
             for (var index = 0; index < seed; ++index)
-                str = str + (object) " " + index;
+                str = str + " " + index;
             return str;
         }
 
@@ -315,7 +315,7 @@ namespace Hacknet
             users.Add(usr);
             if (!silent)
                 log("User Account Added: from " + ipFrom + " -Name: " + name);
-            sendNetworkMessage("cAddUser #" + (object) ip + "#" + ipFrom + "#" + name + "#" + usr.pass + "#" + usr.type);
+            sendNetworkMessage("cAddUser #" + ip + "#" + ipFrom + "#" + name + "#" + usr.pass + "#" + usr.type);
             for (var index = 0; index < daemons.Count; ++index)
                 daemons[index].userAdded(usr.name, usr.pass, usr.type);
         }
@@ -363,7 +363,7 @@ namespace Hacknet
             if (f.name[0] != 64)
             {
                 log("FileRead: by " + ipFrom + " - file:" + f.name);
-                sendNetworkMessage("cFile " + (object) ip + " " + ipFrom + " " + f.name + " " + index);
+                sendNetworkMessage("cFile " + ip + " " + ipFrom + " " + f.name + " " + index);
             }
             return true;
         }
@@ -400,7 +400,7 @@ namespace Hacknet
             }
             var s = "cDelete #" + ip + "#" + ipFrom + "#" + name;
             for (var index = 0; index < folderPath.Count; ++index)
-                s = s + (object) "#" + folderPath[index];
+                s = s + "#" + folderPath[index];
             sendNetworkMessage(s);
             return true;
         }
@@ -458,10 +458,10 @@ namespace Hacknet
             folder2.files.Add(fileEntry);
             var str2 = "cMove #" + ip + "#" + ipFrom + "#" + name + "#" + newName + "#";
             for (var index = 0; index < folderPath.Count; ++index)
-                str2 = str2 + (object) "%" + folderPath[index];
+                str2 = str2 + "%" + folderPath[index];
             var s = str2 + "#";
             for (var index = 0; index < destFolderPath.Count; ++index)
-                s = s + (object) "%" + destFolderPath[index];
+                s = s + "%" + destFolderPath[index];
             sendNetworkMessage(s);
             log("File Moved: by " + ipFrom + " - file:" + name + " To: " + newName);
             return true;
@@ -488,7 +488,7 @@ namespace Hacknet
                 folder.files.Add(new FileEntry(data, name));
             var s = "cMake #" + ip + "#" + ipFrom + "#" + name + "#" + data;
             for (var index = 0; index < folderPath.Count; ++index)
-                s = s + (object) "#" + folderPath[index];
+                s = s + "#" + folderPath[index];
             sendNetworkMessage(s);
             return true;
         }
@@ -511,7 +511,7 @@ namespace Hacknet
             folder.folders.Add(new Folder(name));
             var s = "cMkDir #" + ip + "#" + ipFrom + "#" + name;
             for (var index = 0; index < folderPath.Count; ++index)
-                s = s + (object) "#" + folderPath[index];
+                s = s + "#" + folderPath[index];
             sendNetworkMessage(s);
             return true;
         }
@@ -545,8 +545,8 @@ namespace Hacknet
             }
             if (index1 != -1 && !silent)
                 portsOpen[index1] = 1;
-            log(ipFrom + (object) " Opened Port#" + portNum);
-            sendNetworkMessage("cPortOpen " + (object) ip + " " + ipFrom + " " + portNum);
+            log(ipFrom + " Opened Port#" + portNum);
+            sendNetworkMessage("cPortOpen " + ip + " " + ipFrom + " " + portNum);
         }
 
         public void closePort(int portNum, string ipFrom)
@@ -565,8 +565,8 @@ namespace Hacknet
                     portsOpen[index1] = 0;
             }
             if (flag)
-                log(ipFrom + (object) " Closed Port#" + portNum);
-            sendNetworkMessage("cPortClose " + (object) ip + " " + ipFrom + " " + portNum);
+                log(ipFrom + " Closed Port#" + portNum);
+            sendNetworkMessage("cPortClose " + ip + " " + ipFrom + " " + portNum);
         }
 
         public void openCDTray(string ipFrom)
@@ -632,28 +632,28 @@ namespace Hacknet
             if (os.thisComputer.Equals(this))
                 str1 = "player";
             var str2 = attatchedDeviceIDs == null ? "" : " devices=\"" + attatchedDeviceIDs + "\"";
-            var str3 = "<computer name=\"" + (object) name + "\" ip=\"" + ip + "\" type=\"" + type + "\" spec=\"" + str1 +
+            var str3 = "<computer name=\"" + name + "\" ip=\"" + ip + "\" type=\"" + type + "\" spec=\"" + str1 +
                        "\" id=\"" + idName + "\" " + (icon == null ? "" : "icon=\"" + icon + "\"") + str2 + " >\n" +
                        "<location x=\"" + location.X.ToString(CultureInfo.InvariantCulture) + "\" y=\"" +
-                       location.Y.ToString(CultureInfo.InvariantCulture) + "\" />" + (object) "<security level=\"" +
+                       location.Y.ToString(CultureInfo.InvariantCulture) + "\" />" + "<security level=\"" +
                        securityLevel + "\" traceTime=\"" + traceTime.ToString(CultureInfo.InvariantCulture) +
                        (startingOverloadTicks > 0.0
                            ? "\" proxyTime=\"" +
                              (hasProxy ? startingOverloadTicks.ToString(CultureInfo.InvariantCulture) : "-1")
-                           : "") + "\" portsToCrack=\"" + (string) (object) portsNeededForCrack + "\" adminIP=\"" +
+                           : "") + "\" portsToCrack=\"" + portsNeededForCrack + "\" adminIP=\"" +
                        adminIP + "\" />" + "<admin type=\"" +
                        (admin == null ? "none" : (admin is FastBasicAdministrator ? "fast" : "basic")) +
                        "\" resetPass=\"" + (admin == null || !admin.ResetsPassword ? "false" : "true") + "\"" +
                        " isSuper=\"" + (admin == null || !admin.IsSuper ? "false" : "true") + "\" />";
             var str4 = "";
             for (var index = 0; index < links.Count; ++index)
-                str4 = str4 + (object) " " + links[index];
+                str4 = str4 + " " + links[index];
             var str5 = str3 + "<links>" + str4 + "</links>\n";
             if (firewall != null)
                 str5 = str5 + firewall.getSaveString() + "\n";
             var str6 = "";
             for (var index = 0; index < portsOpen.Count; ++index)
-                str6 = str6 + (object) " " + ports[index];
+                str6 = str6 + " " + ports[index];
             var str7 = str5 + "<portsOpen>" + str6 + "</portsOpen>\n" + "<users>\n";
             for (var index = 0; index < users.Count; ++index)
                 str7 = str7 + users[index].getSaveString() + "\n";

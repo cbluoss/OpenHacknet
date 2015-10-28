@@ -24,7 +24,7 @@ namespace Hacknet
             hexGrid.HexScale = 0.12f;
             foreach (OSTheme key in Enum.GetValues(typeof (OSTheme)))
             {
-                byte[] bytes = utF8Encoding.GetBytes(key + key.GetHashCode());
+                byte[] bytes = utF8Encoding.GetBytes(key.ToString() + key.GetHashCode());
                 var str = "";
                 for (var index = 0; index < bytes.Length; ++index)
                     str += bytes[index].ToString();

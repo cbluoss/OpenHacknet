@@ -27,7 +27,7 @@ namespace Hacknet
             var index1 = Utils.random.Next(vehicleTypes.Count);
             var vehicleType = vehicleTypes[index1];
             var plate = (Utils.getRandomLetter() + Utils.getRandomLetter() + Utils.getRandomLetter()).ToString() +
-                        (object) "-" + Utils.getRandomLetter() + Utils.getRandomLetter() + Utils.getRandomLetter();
+                        "-" + Utils.getRandomLetter() + Utils.getRandomLetter() + Utils.getRandomLetter();
             var stringBuilder = new StringBuilder();
             var num1 = 12;
             var num2 = 4;

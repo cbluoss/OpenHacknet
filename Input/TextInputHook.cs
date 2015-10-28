@@ -102,13 +102,13 @@ namespace Hacknet.Input
                 switch (msg.Msg)
                 {
                     case 256:
-                        OnKeyDown(new KeyEventArgs((Keys) (int) msg.WParam));
+                        OnKeyDown(new KeyEventArgs((Keys) msg.WParam));
                         break;
                     case 257:
-                        OnKeyUp(new KeyEventArgs((Keys) (int) msg.WParam));
+                        OnKeyUp(new KeyEventArgs((Keys) msg.WParam));
                         break;
                     case 258:
-                        OnKeyPress(new KeyPressEventArgs((char) (int) msg.WParam));
+                        OnKeyPress(new KeyPressEventArgs((char) msg.WParam));
                         break;
                 }
             }

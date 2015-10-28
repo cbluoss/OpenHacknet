@@ -264,16 +264,16 @@ namespace Hacknet
                     throw ex;
                 var body =
                     string.Concat(
-                        Utils.GenerateReportFromException(ex) + (object) "\r\n Font:" + titleFont +
-                        (object) "\r\n White:" + Utils.white + (object) "\r\n WhiteDisposed:" + Utils.white.IsDisposed +
-                        (object) "\r\n SmallFont:" + GuiData.smallfont + (object) "\r\n TinyFont:" + GuiData.tinyfont +
+                        Utils.GenerateReportFromException(ex) + "\r\n Font:" + titleFont +
+                        "\r\n White:" + Utils.white + "\r\n WhiteDisposed:" + Utils.white.IsDisposed +
+                        "\r\n SmallFont:" + GuiData.smallfont + "\r\n TinyFont:" + GuiData.tinyfont +
                         "\r\n LineEffectTarget:" + FlickeringTextEffect.GetReportString() + "\r\n PostProcessort stuff:" +
                         PostProcessor.GetStatusReportString(), "\r\nRESOLUTION:\r\n ",
                         Game1.getSingleton().GraphicsDevice.PresentationParameters.BackBufferWidth, "x") +
                     Game1.getSingleton().GraphicsDevice.PresentationParameters.BackBufferHeight + "\r\nFullscreen: " +
                     (Game1.getSingleton().graphics.IsFullScreen ? "true" : "false") + "\r\n Adapter: " +
                     Game1.getSingleton().GraphicsDevice.Adapter.Description + "\r\n Device Name: " +
-                    Game1.getSingleton().GraphicsDevice.Adapter.DeviceName + (object) "\r\n Status: " +
+                    Game1.getSingleton().GraphicsDevice.Adapter.DeviceName + "\r\n Status: " +
                     Game1.getSingleton().GraphicsDevice.GraphicsDeviceStatus;
                 Utils.SendRealWorldEmail(
                     "Hackent " + OSVersion + " Crash " + DateTime.Now.ToShortDateString() + " " +

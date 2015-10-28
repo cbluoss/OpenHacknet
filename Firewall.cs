@@ -164,7 +164,7 @@ namespace Hacknet
 
         public override string ToString()
         {
-            return "Firewall: solution\"" + (object) solution + "\" - time:" + additionalDelay + " - complexity:" +
+            return "Firewall: solution\"" + solution + "\" - time:" + additionalDelay + " - complexity:" +
                    complexity;
         }
     }

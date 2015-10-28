@@ -63,7 +63,7 @@ namespace Hacknet
                     .Replace("[TOTALPAGES]", string.Concat(getNumberOfPages())) + "\n");
             for (var index = num; index < help.Count && index < num + ITEMS_PER_PAGE; ++index)
                 stringBuilder.Append((index == 0 ? " " : "") + help[index] + "\n  \n ");
-            os.write(stringBuilder.ToString() + (object) "\n" + postfix);
+            os.write(stringBuilder.ToString() + "\n" + postfix);
         }
 
         public static int getNumberOfPages()

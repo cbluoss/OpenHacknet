@@ -67,7 +67,7 @@ namespace Hacknet
                       "\"  genTargetName=\"" + genTargetName + "\" genOther=\"" + genOther + "\"";
             return string.Concat(str, " activeCheck=\"", activeCheck, "\">\n") + "<email sender=\"" + email.sender +
                    "\" subject=\"" + email.subject + "\">" + Folder.Filter(email.body) + "</email>" +
-                   (object) "<endFunc val=\"" + endFunctionValue + "\" name=\"" + endFunctionName + "\" />" +
+                   "<endFunc val=\"" + endFunctionValue + "\" name=\"" + endFunctionName + "\" />" +
                    "<posting title=\"" + postingTitle + "\">" + Folder.Filter(postingBody) + "</posting>" + "</mission>";
         }
 

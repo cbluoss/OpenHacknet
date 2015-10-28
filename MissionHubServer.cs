@@ -210,7 +210,7 @@ namespace Hacknet
                             .Replace('/', '-')
                             .Replace(' ', '_') + "\n" + "Status : " + generateUserState(People.hubAgents[index].handle) +
                         "\n" + "Rank : " + generateUserRank(People.hubAgents[index].handle) + "\n",
-                        People.hubAgents[index].handle + (object) "#" + num2));
+                        People.hubAgents[index].handle + "#" + num2));
             }
             num1 = 0;
             int num3;
@@ -234,7 +234,7 @@ namespace Hacknet
                     string.Concat(
                         "USER: " + num + "\n" + "Handle: " + newUser.name + "\n" + "Date Joined : " +
                         DateTime.Now.ToString().Replace('/', '-').Replace(' ', '_') + "\n" + "Status : Active\n",
-                        "Rank : ", 0, "\n"), newUser.name + (object) "#" + num));
+                        "Rank : ", 0, "\n"), newUser.name + "#" + num));
         }
 
         private string generateUserRank(string username)
@@ -478,7 +478,7 @@ namespace Hacknet
             var text1 = mission.postingTitle ?? "";
             TextItem.doFontLabel(new Vector2(bounds.X + 1 + getTransitionOffset(index), bounds.Y + 3), text1,
                 GuiData.smallfont, Color.White, bounds.Width, float.MaxValue);
-            var text2 = "Target: " + (object) mission.target + " -- Client: " + mission.client + " -- Key: " +
+            var text2 = "Target: " + mission.target + " -- Client: " + mission.client + " -- Key: " +
                         mission.generationKeys;
             TextItem.doFontLabel(new Vector2(bounds.X + 1, bounds.Y + bounds.Height - 16), text2, GuiData.detailfont,
                 Color.White*0.3f, bounds.Width, 13f);
@@ -554,7 +554,7 @@ namespace Hacknet
             }
             destinationRectangle1.X += 50;
             var num2 = listingsFolder.files.Count/missionListDisplayed + 1;
-            var text2 = (missionListPageNumber + 1).ToString() + (object) "/" + num2;
+            var text2 = (missionListPageNumber + 1).ToString() + "/" + num2;
             var num3 = (float) (50.0 - GuiData.smallfont.MeasureString(text2).X/2.0);
             sb.DrawString(GuiData.smallfont, text2, new Vector2(destinationRectangle1.X + num3, (int) pos.Y + 1),
                 Color.White);

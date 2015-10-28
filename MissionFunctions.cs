@@ -23,7 +23,7 @@ namespace Hacknet
                 var mail = MailServer.generateEmail("Contract Successful",
                     "Congratulations,\nThe client of your recent contract has reported a success, and is pleased with your work.\n" +
                     "You are now free to accept further contracts from the contact database.\n" +
-                    (object) "\nYour Current Ranking is " + os.currentFaction.getRank() + " of " +
+                    "\nYour Current Ranking is " + os.currentFaction.getRank() + " of " +
                     os.currentFaction.getMaxRank() + ".\n" + "\nThankyou,\n -" + os.currentFaction.name,
                     os.currentFaction.name + " ReplyBot");
                 ((MailServer) os.netMap.mailServer.getDaemon(typeof (MailServer))).addMail(mail, os.defaultUser.name);

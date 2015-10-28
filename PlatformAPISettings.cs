@@ -19,7 +19,7 @@ namespace Hacknet
                 Report = "First Init Failed. ";
                 Console.WriteLine("Steam Init Failed!");
                 Running = SteamAPI.InitSafe();
-                Report = Report + (object) " Second init Running = " + Running;
+                Report = Report + " Second init Running = " + Running;
             }
             else
                 Report = "Steam API Running :" + Running;

@@ -15,7 +15,7 @@
 
         public override string ToString()
         {
-            return name + (object) " from " + uni + ". GPA: " + GPA;
+            return name + " from " + uni + ". GPA: " + GPA;
         }
     }
 }

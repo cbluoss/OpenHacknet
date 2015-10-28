@@ -59,14 +59,13 @@ namespace Hacknet
             Utils.writeToFile(
                 string.Concat(
                     string.Concat(
-                        (object)
-                            (graphicsDevice.PresentationParameters.BackBufferWidth.ToString() + (object) "\r\n" +
-                             graphicsDevice.PresentationParameters.BackBufferHeight + "\r\n" +
-                             (Game1.getSingleton().graphics.IsFullScreen ? "true" : "false") + "\r\n" + "bloom: " +
-                             (PostProcessor.bloomEnabled ? "true" : "false") + "\r\n" + "scanlines: " +
-                             (PostProcessor.scanlinesEnabled ? "true" : "false") + "\r\n" + "muted: " +
-                             (MusicManager.isMuted ? "true" : "false") + "\r\n"), (object) "volume: ",
-                        (object) MusicManager.getVolume(), (object) "\r\n") + "fontConfig: " +
+                        (graphicsDevice.PresentationParameters.BackBufferWidth.ToString() + "\r\n" +
+                         graphicsDevice.PresentationParameters.BackBufferHeight + "\r\n" +
+                         (Game1.getSingleton().graphics.IsFullScreen ? "true" : "false") + "\r\n" + "bloom: " +
+                         (PostProcessor.bloomEnabled ? "true" : "false") + "\r\n" + "scanlines: " +
+                         (PostProcessor.scanlinesEnabled ? "true" : "false") + "\r\n" + "muted: " +
+                         (MusicManager.isMuted ? "true" : "false") + "\r\n"), "volume: ",
+                        MusicManager.getVolume(), "\r\n") + "fontConfig: " +
                     GuiData.ActiveFontConfig.name + "\r\n", "hasSaved: ", hasEverSaved, "\r\n"), "Settings.txt");
         }
     }
