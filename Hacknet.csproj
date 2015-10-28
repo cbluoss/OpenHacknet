@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files (x86)\Steam\SteamApps\common\Hacknet\Hacknet.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{61A71D16-DD12-46C1-97F4-C3612E13C55D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>Hacknet</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Hacknet</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Hacknet.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework.Game" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="Microsoft.Xna.Framework" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics" />
+    <Reference Include="Steamworks.NET">
+      <HintPath>lib\Steamworks.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System" />
+    <Reference Include="Microsoft.Xna.Framework.Xact" />
+    <Reference Include="Microsoft.Xna.Framework.Storage" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Daemon.cs" />
+    <Compile Include="SongChangerDaemon.cs" />
+    <Compile Include="AchievementsManager.cs" />
+    <Compile Include="PlatformAPISettings.cs" />
+    <Compile Include="RemoteSaveStorage.cs" />
+    <Compile Include="StatsManager.cs" />
+    <Compile Include="ActionDelayer.cs" />
+    <Compile Include="PorthackHeartDaemon.cs" />
+    <Compile Include="DeathRowDatabaseDaemon.cs" />
+    <Compile Include="HeartMonitorDaemon.cs" />
+    <Compile Include="ISPDaemon.cs" />
+    <Compile Include="MedicalDatabaseDaemon.cs" />
+    <Compile Include="PointClickerDaemon.cs" />
+    <Compile Include="TraiLoadingSpinnerEffect.cs" />
+    <Compile Include="Module.cs" />
+    <Compile Include="ExeModule.cs" />
+    <Compile Include="AdvancedTutorial.cs" />
+    <Compile Include="MessageBoardPost.cs" />
+    <Compile Include="MessageBoardThread.cs" />
+    <Compile Include="MessageBoardPostImage.cs" />
+    <Compile Include="AuthenticatingDaemon.cs" />
+    <Compile Include="MessageBoardDaemon.cs" />
+    <Compile Include="ClockExe.cs" />
+    <Compile Include="SequencerExe.cs" />
+    <Compile Include="HexClockExe.cs" />
+    <Compile Include="ThemeChangerExe.cs" />
+    <Compile Include="DecypherTrackExe.cs" />
+    <Compile Include="DecypherExe.cs" />
+    <Compile Include="EOSDeviceScannerExe.cs" />
+    <Compile Include="MedicalPortExe.cs" />
+    <Compile Include="TraceKillExe.cs" />
+    <Compile Include="GameScreen.cs" />
+    <Compile Include="EOSAppGenerator.cs" />
+    <Compile Include="MissionSerializer.cs" />
+    <Compile Include="CoreModule.cs" />
+    <Compile Include="SQLExploitExe.cs" />
+    <Compile Include="Faction.cs" />
+    <Compile Include="EndingSequenceModule.cs" />
+    <Compile Include="NotesExe.cs" />
+    <Compile Include="MedicalRecord.cs" />
+    <Compile Include="ProgramRunner.cs" />
+    <Compile Include="ProgressionFlags.cs" />
+    <Compile Include="OldSystemSaveFileManifest.cs" />
+    <Compile Include="Administrator.cs" />
+    <Compile Include="ComputerTypeInfo.cs" />
+    <Compile Include="AcademicDatabaseDaemon.cs" />
+    <Compile Include="AddEmailDaemon.cs" />
+    <Compile Include="ConnectedNodeEffect.cs" />
+    <Compile Include="AvconDemoEndDaemon.cs" />
+    <Compile Include="MailServer.cs" />
+    <Compile Include="BoatMail.cs" />
+    <Compile Include="UserDetail.cs" />
+    <Compile Include="Computer.cs" />
+    <Compile Include="ComputerLoader.cs" />
+    <Compile Include="Corporation.cs" />
+    <Compile Include="CrashModule.cs" />
+    <Compile Include="MissionHubServer.cs" />
+    <Compile Include="WebServerDaemon.cs" />
+    <Compile Include="OnlineWebServerDaemon.cs" />
+    <Compile Include="DebugLog.cs" />
+    <Compile Include="DisplayModule.cs" />
+    <Compile Include="FileType.cs" />
+    <Compile Include="FileEntry.cs" />
+    <Compile Include="FileSanitiser.cs" />
+    <Compile Include="FileSystem.cs" />
+    <Compile Include="Folder.cs" />
+    <Compile Include="FTPBounceExe.cs" />
+    <Compile Include="ForkBombExe.cs" />
+    <Compile Include="GameSaver.cs" />
+    <Compile Include="GenerationStatics.cs" />
+    <Compile Include="GuiData.cs" />
+    <Compile Include="Helpfile.cs" />
+    <Compile Include="HTTPExploitExe.cs" />
+    <Compile Include="InputStates.cs" />
+    <Compile Include="InputMap.cs" />
+    <Compile Include="InputMapping.cs" />
+    <Compile Include="IntroTextModule.cs" />
+    <Compile Include="MailResponder.cs" />
+    <Compile Include="MailIcon.cs" />
+    <Compile Include="MainMenu.cs" />
+    <Compile Include="MessageBoxScreen.cs" />
+    <Compile Include="MissionListingServer.cs" />
+    <Compile Include="MissionFunctions.cs" />
+    <Compile Include="MissionGenerator.cs" />
+    <Compile Include="MissionGenerationParser.cs" />
+    <Compile Include="ActiveMission.cs" />
+    <Compile Include="Multiplayer.cs" />
+    <Compile Include="MultiplayerGameOverScreen.cs" />
+    <Compile Include="MultiplayerLobby.cs" />
+    <Compile Include="MusicManager.cs" />
+    <Compile Include="NameGenerator.cs" />
+    <Compile Include="NetworkMap.cs" />
+    <Compile Include="OptionsMenu.cs" />
+    <Compile Include="OS.cs" />
+    <Compile Include="PortHackExe.cs" />
+    <Compile Include="PatternDrawer.cs" />
+    <Compile Include="HackerScriptExecuter.cs" />
+    <Compile Include="People.cs" />
+    <Compile Include="Degree.cs" />
+    <Compile Include="PeopleAssets.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="WorldLocation.cs" />
+    <Compile Include="WorldLocationLoader.cs" />
+    <Compile Include="PortExploits.cs" />
+    <Compile Include="PostProcessor.cs" />
+    <Compile Include="ProgramList.cs" />
+    <Compile Include="Programs.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Game1.cs" />
+    <Compile Include="RamModule.cs" />
+    <Compile Include="SaveData.cs" />
+    <Compile Include="ScreenState.cs" />
+    <Compile Include="InputState.cs" />
+    <Compile Include="PlayerIndexEventArgs.cs" />
+    <Compile Include="ScreenManager.cs" />
+    <Compile Include="SMTPoverflowExe.cs" />
+    <Compile Include="SSHCrackExe.cs" />
+    <Compile Include="ShellExe.cs" />
+    <Compile Include="SecurityTraceExe.cs" />
+    <Compile Include="ExternalCounterpart.cs" />
+    <Compile Include="ServerScreen.cs" />
+    <Compile Include="BasicAdministrator.cs" />
+    <Compile Include="FileEncrypter.cs" />
+    <Compile Include="EOSComp.cs" />
+    <Compile Include="FastBasicAdministrator.cs" />
+    <Compile Include="Firewall.cs" />
+    <Compile Include="Services.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SettingsLoader.cs" />
+    <Compile Include="SFX.cs" />
+    <Compile Include="Terminal.cs" />
+    <Compile Include="TextureBank.cs" />
+    <Compile Include="OSTheme.cs" />
+    <Compile Include="ThemeManager.cs" />
+    <Compile Include="TraceTracker.cs" />
+    <Compile Include="TutorialExe.cs" />
+    <Compile Include="UploadServerDaemon.cs" />
+    <Compile Include="UsernameGenerator.cs" />
+    <Compile Include="BackgroundObject.cs" />
+    <Compile Include="CollidableTriangle.cs" />
+    <Compile Include="CollidableRectangle.cs" />
+    <Compile Include="LevelState.cs" />
+    <Compile Include="ObjectState.cs" />
+    <Compile Include="DelayedInput.cs" />
+    <Compile Include="LoadedTexture.cs" />
+    <Compile Include="KeyboardAndGamePad.cs" />
+    <Compile Include="SpritePlacementData.cs" />
+    <Compile Include="LevelType.cs" />
+    <Compile Include="PlayerBonuses.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="VehicleRegistration.cs" />
+    <Compile Include="VehicleType.cs" />
+    <Compile Include="VehicleInfo.cs" />
+    <Compile Include="WebRenderer.cs" />
+    <Compile Include="Input\TextInputHook.cs" />
+    <Compile Include="Input\Stack`1.cs" />
+    <Compile Include="Daemons\Helpers\IMedicalMonitor.cs" />
+    <Compile Include="Daemons\Helpers\BasicMedicalMonitor.cs" />
+    <Compile Include="Effects\AudioVisualizer.cs" />
+    <Compile Include="Effects\Cube3D.cs" />
+    <Compile Include="Effects\FlickeringTextEffect.cs" />
+    <Compile Include="Effects\HexGridBackground.cs" />
+    <Compile Include="Effects\MovingBarsEffect.cs" />
+    <Compile Include="Effects\NodeBounceEffect.cs" />
+    <Compile Include="Effects\PortHackCubeSequence.cs" />
+    <Compile Include="Effects\TraceDangerSequence.cs" />
+    <Compile Include="Effects\WebpageLoadingEffect.cs" />
+    <Compile Include="Effects\ThinBarcode.cs" />
+    <Compile Include="Effects\BarcodeEffect.cs" />
+    <Compile Include="Gui\ScrollBar.cs" />
+    <Compile Include="Gui\Button.cs" />
+    <Compile Include="Gui\CheckBox.cs" />
+    <Compile Include="Gui\DraggableRectangle.cs" />
+    <Compile Include="Gui\RenderedRectangle.cs" />
+    <Compile Include="Gui\ScrollablePanel.cs" />
+    <Compile Include="Gui\SelectableTextList.cs" />
+    <Compile Include="Gui\SliderBar.cs" />
+    <Compile Include="Gui\TextBox.cs" />
+    <Compile Include="Gui\TextItem.cs" />
+    <Compile Include="Misc\DemoEndScreen.cs" />
+    <Compile Include="Misc\HSLColor.cs" />
+    <Compile Include="Misc\TestSuite.cs" />
+    <Compile Include="Mission\MisisonGoal.cs" />
+    <Compile Include="Mission\CheckFlagSetMission.cs" />
+    <Compile Include="Mission\DelayMission.cs" />
+    <Compile Include="Mission\DeathRowRecordModifyMission.cs" />
+    <Compile Include="Mission\DeathRowRecordRemovalMission.cs" />
+    <Compile Include="Mission\SendEmailMission.cs" />
+    <Compile Include="Mission\BootLoadList.cs" />
+    <Compile Include="Mission\AddDegreeMission.cs" />
+    <Compile Include="Mission\WipeDegreesMission.cs" />
+    <Compile Include="Mission\FileUploadMission.cs" />
+    <Compile Include="Mission\GetStringMission.cs" />
+    <Compile Include="Mission\FileChangeMission.cs" />
+    <Compile Include="Mission\FileDeletionMission.cs" />
+    <Compile Include="Mission\FileDownloadMission.cs" />
+    <Compile Include="Mission\GetAdminMission.cs" />
+    <Compile Include="Factions\EntropyFaction.cs" />
+    <Compile Include="Factions\HubFaction.cs" />
+    <Compile Include="Factions\AllFactions.cs" />
+    <Compile Include="Modules\Helpers\DisplayModuleLSHelper.cs" />
+    <Compile Include="Modules\Overlays\IncomingConnectionOverlay.cs" />
+    <Compile Include="PlatformAPI\Storage\IStorageMethod.cs" />
+    <Compile Include="PlatformAPI\Storage\BasicStorageMethod.cs" />
+    <Compile Include="PlatformAPI\Storage\LocalDocumentsStorageMethod.cs" />
+    <Compile Include="PlatformAPI\Storage\OldSystemStorageMethod.cs" />
+    <Compile Include="PlatformAPI\Storage\SaveAccountData.cs" />
+    <Compile Include="PlatformAPI\Storage\SaveFileManager.cs" />
+    <Compile Include="PlatformAPI\Storage\SaveFileManifest.cs" />
+    <Compile Include="PlatformAPI\Storage\SteamCloudStorageMethod.cs" />
+    <Compile Include="ExternalCounterparts\ExternalNetworkedServer.cs" />
+    <Compile Include="Magic\NAT.cs" />
+    <Compile Include="ScreenManagement\MessagePopup.cs" />
+    <Compile Include="UIUtils\AnimatedSpriteExporter.cs" />
+    <Compile Include="UIUtils\AttractModeMenuScreen.cs" />
+    <Compile Include="UIUtils\AudioUtils.cs" />
+    <Compile Include="UIUtils\CLinkBuffer`1.cs" />
+    <Compile Include="UIUtils\FancyOutlines.cs" />
+    <Compile Include="UIUtils\GetStringUIControl.cs" />
+    <Compile Include="UIUtils\LCG.cs" />
+    <Compile Include="UIUtils\SavefileLoginScreen.cs" />
+    <Compile Include="UIUtils\ScrollableSectionedPanel.cs" />
+    <Compile Include="UIUtils\WaveformRenderer.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Microsoft\Xna\Framework.RuntimeProfile" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
